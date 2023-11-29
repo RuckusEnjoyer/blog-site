@@ -14,7 +14,12 @@ const PORT = process.env.PORT || 3001;
 //This controls how long someone can be logged in for
 const sess = {
     secret: process.env.SECRET,
-    cookie: {},
+    cookie: {
+        maxAge: 300000,
+        httpOnly: true,
+        secure: false,
+        sameSite: 'strict'
+    },
     resave: false,
     saveUnlisted: true,
     store: new SequelizeStore({
