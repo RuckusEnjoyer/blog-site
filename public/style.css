@@ -47,13 +47,13 @@ nav{
 }
 
 
-.navlink{
+.link{
     color: var(--light);
     margin: 10px;
     font-size: 20px;
 }
 
-.navlink:hover{
+.link:hover{
     color: var(--dark);
 }
 
@@ -69,3 +69,53 @@ nav{
 body{
     background-color: var(--light)
 }
+
+.card1 {
+    background-color: var(--mid);
+    padding: 3vw;
+    width: 30vw;
+    height: 50vh;
+    margin: 3vw;
+    border-radius: 10% 60% 60% 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: 8
+}
+
+.card2 {
+    background-color: var(--dark);
+    padding: 3vw;
+    width: 30vw;
+    height: 50vh;
+    margin: 3vw;
+    border-radius: 90% 50% 10% 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: 7;
+}
+
+.centering{
+    display: flex;
+    justify-content: center;
+}
+
+.login {
+    flex-direction: column;
+    display: flex;
+    margin: 10px;
+}
+
+.lg-item {
+    margin: 10px;
+    padding: 10px;
+}
+
+.form-input {
+    border: solid var(--dark) 2px;
+    border-radius: 10px;
+}
+
