@@ -4,33 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogsville</title>
-    
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header>
-        <ul>
-            <li>
-                <a href="/">Home</a>
-            </li>
-            <li>
-                <a href="/dashboard">Dashboard</a>
-            </li>
+        <nav>
+                <a class="navlink" href="/">Home</a>
+
+                <a class="navlink" href="/dashboard">Dashboard</a>
             {{#if loggedIn}}
-            <li>
-                <a href="">Logout</a>
-            </li>
+
+                <a class="navlink" href="/">Logout</a>
+
             {{else}}
-            <li>
-                <a href="/login">Login</a>
-            </li>
+                <a class="navlink" href="/login">Login</a>
             {{/if}}
-        </ul>
-        <h1>
+        </nav>
+        <h1 class="title">
             Blogsville
         </h1>
     </header>
+    <div class="separator"> </div>
     <main>
         {{{body}}}
     </main>
+    <script src="./index.js"></script>
 </body>
 </html>

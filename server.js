@@ -1,5 +1,6 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
+const session = require('express-session');
 //TO DO: when helpers add this in here
 const hbs = exphbs.create({});
 const path = require('path');
