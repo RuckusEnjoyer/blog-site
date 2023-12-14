@@ -13,6 +13,7 @@
     list-style: none;
     border: none;
     font-family: sans-serif;
+    color: var(--dark);
 }
 
 /* main.handlebars file */
@@ -110,7 +111,7 @@ body{
 }
 
 .lg-item {
-    margin: 10px;
+    margin: 5px;
     padding: 10px;
 }
 
@@ -119,3 +120,10 @@ body{
     border-radius: 10px;
 }
 
+.button {
+    background-color: var(--dark);
+    padding: 10px;
+    color: var(--light);
+    border-radius: 10px;
+    margin: 10px;
+}

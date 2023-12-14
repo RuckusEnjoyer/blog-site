@@ -7,16 +7,12 @@ router.get('/', async (req, res) => {
     try{
         //grabbing the data from the database
         const postData = await Post.findAll({
-            // include: [
-            //     {
-            //         model: Comment,
-            //         attributes:['user_id', 'body'],
-            //     },
-            //     {
-            //         model: User,
-            //         attributes: ['username']
-            //     }
-            // ],
+            include: [
+                {
+                    model: User,
+                    attributes: ['username']
+                }
+            ],
         });
 
         //the variable that puts the post data in crayons
@@ -38,14 +34,14 @@ router.get('/', async (req, res) => {
 router.get('/dashboard', withAuth, async (req, res) => {
     try{
         const postData = await Post.findAll({
-            // where: {
-            //     user_id: req.session.user_id
-            // }
+            where: {
+                user_id: req.session.user_id
+            }
         })
 
         const posts = postData.map((post) => post.get({ plain: true }));
 
-        res.render('dashboard', {
+        res.render('dash', {
             posts,
             loggedIn: req.session.loggedIn
         })
