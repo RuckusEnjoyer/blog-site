@@ -160,7 +160,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
+    /* position: absolute; */
     z-index: 7;
 }
 
@@ -193,4 +193,43 @@ body{
 
 .title{
     padding: 5px;
+}
+
+
+
+/* post CSS */
+.post{
+    background-color: var(--dark);
+    /* padding: 10px; */
+    width: 50vw;
+    height: 25vh;
+    /* margin: 3vw; */
+    border-radius: 50% 10px 30% 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    z-index: 8
+}
+
+.post-2{
+    background-color: var(--mid);
+    /* padding: 10px; */
+    width: 50vw;
+    height: 25vh;
+    margin: 3vw;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    /* position: absolute; */
+    z-index: 7
+}
+
+.column{
+    flex-direction: column;
+}
+
+.text-light{
+    color: var(--light);
+    margin: 10px;
 }

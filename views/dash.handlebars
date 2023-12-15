@@ -1,1 +1,14 @@
-{{> create-post}}
+<div class="centering column">
+    <section class="centering">
+        {{> create-post}}
+    </section>
+    <section class="centering column">
+        {{#each posts as |post|}}
+            <div class="post-2">
+                {{> post}}
+            </div>
+        {{/each}}
+    </section>
+
+</div>
+

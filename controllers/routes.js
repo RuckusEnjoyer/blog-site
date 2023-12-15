@@ -52,7 +52,40 @@ router.get('/dashboard', withAuth, async (req, res) => {
 })
 
 //TO DO: get one post
-router.get('/posts/:id')
+router.post('/post/:id', withAuth, async (req, res) => {
+    try{
+        const postData = await Post.findByPK(req.params.id, {
+            include: [
+                {
+                    model: Comment,
+                    include: [
+                        {
+                            model: User,
+                            attributes: ['username']
+                        }
+                    ]
+                },
+                {
+                    model: User,
+                    attributes: ['username']
+                }
+            ]
+        });
+
+        const post = postData.get({ plain : true })
+        
+        console.log(postData);
+
+        res.render('post-focus', {
+            ...post,
+            loggedIn: req.session.loggedIn
+        })
+
+    }catch (err) {
+        res.status(500).json(err);
+        console.log(err);
+    }
+});
 
 
 
