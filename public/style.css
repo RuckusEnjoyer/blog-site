@@ -233,3 +233,30 @@ body{
     color: var(--light);
     margin: 10px;
 }
+
+.create-comment{
+    background-color: var(--mid);
+    padding: 10px;
+    width: 40vw;
+    height: 15vh;
+    /* margin: 1vw; */
+    border-radius: 50% 10px 30% 10px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 8
+}
+
+.create-comment-2{
+    background-color: var(--dark);
+    padding: 3vw;
+    width: 40vw;
+    height: 15vh;
+    /* margin: 1vw; */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* position: absolute; */
+    z-index: 7;
+}

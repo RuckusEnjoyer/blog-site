@@ -52,22 +52,15 @@ router.get('/dashboard', withAuth, async (req, res) => {
 })
 
 //TO DO: get one post
-router.post('/post/:id', withAuth, async (req, res) => {
+router.post('/post/:id', async (req, res) => {
     try{
         const postData = await Post.findByPK(req.params.id, {
             include: [
                 {
                     model: Comment,
-                    include: [
-                        {
-                            model: User,
-                            attributes: ['username']
-                        }
-                    ]
                 },
                 {
-                    model: User,
-                    attributes: ['username']
+                    model: User
                 }
             ]
         });
